@@ -14,9 +14,24 @@ namespace TwoBiased\ContaoValidationBundle\EventListener\DataContainer;
 
 use Contao\CoreBundle\ServiceAnnotation\Callback;
 use Contao\DataContainer;
+use Contao\FormFieldModel;
 
 class FormFieldListener
 {
+    /**
+     * @Callback(table="tl_form_field", target="config.onload")
+     */
+    public function adjustDcaByType(DataContainer $dc = null): void
+    {
+        if (($objField = FormFieldModel::findByPk($dc->id)) !== null) {
+            switch ($objField->type) {
+                case 'text':
+                    $GLOBALS['TL_DCA']['tl_form_field']['fields']['rgxp']['options'][] = 'iban';
+                    break;
+            }
+        }
+    }
+
     /**
      * @Callback(table="tl_form_field", target="fields.ibanAllowedCountryCodes.options")
      */

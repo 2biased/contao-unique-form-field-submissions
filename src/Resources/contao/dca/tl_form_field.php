@@ -14,8 +14,6 @@ declare(strict_types=1);
 $GLOBALS['TL_DCA']['tl_form_field']['palettes']['textiban'] = '{type_legend},type,name,label;{fconfig_legend},mandatory,rgxp,placeholder,ibanAllowedCountryCodes;{expert_legend:hide},class,value,accesskey,tabindex;{template_legend:hide},customTpl;{invisible_legend:hide},invisible';
 
 // Fields
-$GLOBALS['TL_DCA']['tl_form_field']['fields']['rgxp']['options'][] = 'iban';
-
 $GLOBALS['TL_DCA']['tl_form_field']['fields']['ibanAllowedCountryCodes'] = [
     'exclude' => true,
     'inputType' => 'select',
