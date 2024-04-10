@@ -1,0 +1,34 @@
+{
+    "name": "2biased/contao-validation-bundle",
+    "description": "",
+    "keywords": ["contao", "form"],
+    "type": "contao-bundle",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "2biased",
+            "email": "2biased@proton.me"
+        }
+    ],
+    "require": {
+        "php": "~8.0",
+        "contao/core-bundle": "^4.13"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.3"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload":{
+        "psr-4": {
+            "TwoBiased\\ContaoValidationBundle\\": "src/"
+        }
+    },
+    "extra":{
+        "contao-manager-plugin": "TwoBiased\\ContaoValidationBundle\\ContaoManager\\Plugin"
+    },
+    "scripts": {
+        "cs-fixer": "@php tools/ecs/vendor/bin/ecs check src tools/ecs/config --config tools/ecs/config/default.php --fix --ansi"
+    }
+}
