@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of Contao Validation Bundl.
+ * This file is part of Contao Validation Bundle.
  *
  * @author 2biased <2biased@proton.me>
  *
@@ -19,7 +19,7 @@ return static function (ECSConfig $ecsConfig): void {
     $ecsConfig->sets([__DIR__.'/../vendor/contao/easy-coding-standard/config/contao.php']);
 
     $ecsConfig->ruleWithConfiguration(HeaderCommentFixer::class, [
-        'header' => "This file is part of Contao Validation Bundl.\n\n@author 2biased <2biased@proton.me>\n\n@license LGPL-3.0-or-later",
+        'header' => "This file is part of Contao Validation Bundle.\n\n@author 2biased <2biased@proton.me>\n\n@license LGPL-3.0-or-later",
     ]);
 
     $ecsConfig->ruleWithConfiguration(EmptyLoopBodyFixer::class, ['style' => 'semicolon']);
