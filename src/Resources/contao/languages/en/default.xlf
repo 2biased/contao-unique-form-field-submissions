@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+  <file datatype="php" original="src/Resources/contao/languages/en/default.php" source-language="en">
+    <body>
+      <trans-unit id="ERR.iban">
+        <source>Pleaser enter a valid IBAN!</source>
+      </trans-unit>
+      <trans-unit id="ERR.ibanRestrictedCountryCodes">
+        <source>The IBAN must begin with one of the following country code: %s</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
+

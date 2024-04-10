@@ -12,7 +12,8 @@
     ],
     "require": {
         "php": "~8.0",
-        "contao/core-bundle": "^4.13"
+        "contao/core-bundle": "^4.13",
+        "globalcitizen/php-iban": "^4.2"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.3"
