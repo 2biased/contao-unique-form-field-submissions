@@ -5,4 +5,4 @@ services:
 
     2biased.conato.validation.event_listeners:
         namespace: TwoBiased\ContaoValidationBundle\EventListener\
-        resource: '../../EventListener'
+        resource: '../src/EventListener'
