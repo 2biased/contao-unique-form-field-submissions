@@ -20,11 +20,11 @@ class AddCustomRegexpListener
     /**
      * @Hook("addCustomRegexp")
      */
-    public function __invoke(string $regexp, $input, Widget $widget): bool
+    public function __invoke(string $regexp, mixed $input, Widget $widget): bool
     {
         if ('iban' === $regexp) {
             if (verify_iban($input)) {
-                if ($widget->ibanAllowedCountryCodes) {
+                if ($widget->ibanAllowedCountryCodes) { // @phpstan-ignore-line
                     $countryCodes = explode(',', $widget->ibanAllowedCountryCodes);
 
                     if (!\in_array(iban_get_country_part($input), $countryCodes, true)) {
