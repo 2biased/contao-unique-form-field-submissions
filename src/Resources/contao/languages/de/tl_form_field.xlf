@@ -15,7 +15,7 @@
         <target>Zulässige IBAN-Ländercodes</target>
       </trans-unit>
       <trans-unit id="tl_form_field.ibanAllowedCountryCodes.1">
-        <source>Select the allowed country codes or leave the slection empty to accept all country codes.</source>
+        <source>Select the allowed country codes or leave the selection empty to accept all country codes.</source>
         <target>Wählen Sie die zulässigen Ländercodes aus oder lassen Sie die Auswahl leer, um alle Ländercodes zu akzeptieren.</target>
       </trans-unit>
     </body>

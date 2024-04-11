@@ -3,7 +3,7 @@
   <file datatype="php" original="src/Resources/contao/languages/en/default.php" source-language="en">
     <body>
       <trans-unit id="ERR.iban">
-        <source>Pleaser enter a valid IBAN!</source>
+        <source>Please enter a valid IBAN!</source>
         <target>Bitte geben Sie eine gültige IBAN ein!</target>
       </trans-unit>
       <trans-unit id="ERR.ibanRestrictedCountryCodes">

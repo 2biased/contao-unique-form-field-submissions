@@ -12,7 +12,7 @@
         <source>Allowed IBAN country codes</source>
       </trans-unit>
       <trans-unit id="tl_form_field.ibanAllowedCountryCodes.1">
-        <source>Select the allowed country codes or leave the slection empty to accept all country codes.</source>
+        <source>Select the allowed country codes or leave the selection empty to accept all country codes.</source>
       </trans-unit>
     </body>
   </file>
