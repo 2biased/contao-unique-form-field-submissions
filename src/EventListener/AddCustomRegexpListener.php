@@ -12,20 +12,18 @@ declare(strict_types=1);
 
 namespace TwoBiased\ContaoValidationBundle\EventListener;
 
-use Contao\CoreBundle\ServiceAnnotation\Hook;
+use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 use Contao\Widget;
 
 class AddCustomRegexpListener
 {
-    /**
-     * @Hook("addCustomRegexp")
-     */
+    #[AsHook('addCustomRegexp')]
     public function __invoke(string $regexp, mixed $input, Widget $widget): bool
     {
         if ('iban' === $regexp) {
             if (verify_iban($input)) {
                 if ($widget->ibanAllowedCountryCodes) { // @phpstan-ignore-line
-                    $countryCodes = explode(',', $widget->ibanAllowedCountryCodes);
+                    $countryCodes = explode(',', (string) $widget->ibanAllowedCountryCodes);
 
                     if (!\in_array(iban_get_country_part($input), $countryCodes, true)) {
                         $widget->addError(sprintf($GLOBALS['TL_LANG']['ERR']['ibanRestrictedCountryCodes'], implode(', ', $countryCodes)));
