@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 /*
- * This file is part of Contao Validation Bundl.
+ * This file is part of Contao Validation Bundle.
  *
- * (c) 2biased
+ * @author 2biased <2biased@proton.me>
  *
  * @license LGPL-3.0-or-later
  */
