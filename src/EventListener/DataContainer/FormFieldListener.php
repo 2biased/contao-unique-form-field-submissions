@@ -21,9 +21,9 @@ class FormFieldListener
     /**
      * @Callback(table="tl_form_field", target="config.onload")
      */
-    public function adjustDcaByType(DataContainer $dc = null): void
+    public function adjustDcaByType(DataContainer|null $dc = null): void
     {
-        if (($objField = FormFieldModel::findByPk($dc->id)) !== null) {
+        if (($objField = FormFieldModel::findById($dc->id)) !== null) {
             switch ($objField->type) {
                 case 'text':
                     $GLOBALS['TL_DCA']['tl_form_field']['fields']['rgxp']['options'][] = 'iban';
@@ -35,7 +35,7 @@ class FormFieldListener
     /**
      * @Callback(table="tl_form_field", target="fields.ibanAllowedCountryCodes.options")
      */
-    public function getIbanCountryCodes(DataContainer $dc = null): array
+    public function getIbanCountryCodes(DataContainer|null $dc = null): array
     {
         $countries = [];
 
